@@ -6,6 +6,13 @@
             "runtime": "vercel-php@0.6.1"
         }
     },
+    "builds": [
+    {
+      "src": "public/index.php",
+      "use": "@vercel/php"
+    }
+  ],
+  "installCommand": "apt-get update && apt-get install -y libssl-dev && composer install",
     "routes": [
         {
             "src": "/(favicon\\.ico|robots\\.txt)",
