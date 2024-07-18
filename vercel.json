@@ -7,12 +7,12 @@
         }
     },
     "builds": [
-    {
-      "src": "public/index.php",
-      "use": "@vercel/php"
-    }
-  ],
-  "installCommand": "apt-get update && apt-get install -y libssl-dev && composer install",
+      {
+        "src": "public/index.php",
+        "use": "@vercel/php"
+      }
+    ],
+    "installCommand": "./install.sh && composer install",
     "routes": [
         {
             "src": "/(favicon\\.ico|robots\\.txt)",
@@ -45,4 +45,5 @@
         "SSR_TEMP_PATH": "/tmp/ssr",
         "NODE_PATH": "node"
     }
-}
+  }
+  
